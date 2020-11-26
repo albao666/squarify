@@ -129,6 +129,7 @@ def squarify(sizes, x, y, dx, dy):
         sizes[: (i + 1)], x, y, dx, dy
     ):
         i += 1
+    print(i)
     current = sizes[:i]
     remaining = sizes[i:]
 
@@ -271,3 +272,9 @@ def plot(
     ax.set_ylim(0, norm_y)
 
     return ax
+
+
+if __name__ == '__main__':
+    import matplotlib.pyplot as plt
+    plot(sizes=(1, 2, 3, 4, 5, 6), alpha=.8)
+    plt.show()
